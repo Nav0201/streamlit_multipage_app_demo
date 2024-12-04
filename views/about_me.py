@@ -56,6 +56,17 @@ st.write(
     """
 )
 
+# --- AWARDS ---
+st.write("\n")
+st.subheader("Awards", anchor=False)
+st.write(
+    """
+    - **2024**: Babel Fish Award, Best Associate at Accenture
+    - **2022**: Best Innovation Project for UV Sterilization Box, Hindustan Institute
+    - **2021**: Industry Innovation Grant, Robotic Manipulator for Skypoint Industries
+    """
+)
+
 # --- PROJECTS ---
 st.write("\n")
 st.subheader("Projects", anchor=False)
@@ -82,28 +93,6 @@ st.write(
     """
 )
 
-# --- CERTIFICATIONS ---
-st.write("\n")
-st.subheader("Certifications", anchor=False)
-st.write(
-    """
-    - CATIA
-    - Industrial IoT (L&T Edutech)
-    - Marketing in the Digital World
-    - Introduction to Psychology
-    """
-)
-
-# --- AWARDS ---
-st.write("\n")
-st.subheader("Awards", anchor=False)
-st.write(
-    """
-    - **2024**: Babel Fish Award, Best Associate at Accenture
-    - **2022**: Best Innovation Project for UV Sterilization Box, Hindustan Institute
-    - **2021**: Industry Innovation Grant, Robotic Manipulator for Skypoint Industries
-    """
-)
 
 # --- SOFT SKILLS ---
 st.write("\n")
@@ -115,5 +104,17 @@ st.write(
     - Creative thinker with a passion for design and innovation
     - Detail-oriented with the ability to prioritize tasks effectively
     - Strong leadership and team management abilities
+    """
+)
+
+# --- CERTIFICATIONS ---
+st.write("\n")
+st.subheader("Certifications", anchor=False)
+st.write(
+    """
+    - CATIA
+    - Industrial IoT (L&T Edutech)
+    - Marketing in the Digital World
+    - Introduction to Psychology
     """
 )
