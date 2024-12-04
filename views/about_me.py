@@ -4,10 +4,10 @@ from forms.contact import contact_form
 
 
 
-if st.button("Contact Me"):
+@st.experimental_dialog("Contact Me")
 def show_contact_form():
-    # st.text_input("first name")
     contact_form()
+
 
 
 # --- HERO SECTION ---
