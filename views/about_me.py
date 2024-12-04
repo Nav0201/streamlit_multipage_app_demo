@@ -23,11 +23,7 @@ st.write("\n")
 st.subheader("About Me", anchor=False)
 st.write(
     """
-    Hello! I am Naveen, a highly skilled software engineer with a passion for building impactful web tools, 
-    automation services, and creating user-friendly solutions. With a strong foundation in full-stack development, 
-    data visualization, and business analysis, I have worked on various projects that combine technical excellence 
-    with creative design. I am always eager to learn and grow, both personally and professionally, and aim to make a 
-    difference through innovation.
+    I’m an ambitious engineer with strong product designing knowledge, analytical and interpersonal skills. Thriving to connect the gap between technical expertise and business outcomes, leveraging my skills to achieve impactful results.
     """
 )
 
