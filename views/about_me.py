@@ -76,6 +76,20 @@ st.write(
     """
 )
 
+# --- INTERNSHIPS ---
+st.write("\n")
+st.subheader("Internships", anchor=False)
+st.write(
+    """
+    - **East West Combined Industries (Jan 2022 – May 2022)**: Researched and developed fuel cells and bipolar plates. 
+      Collaborated with clients to understand requirements and delivered innovative, cost-effective solutions.
+    - **Skypoint Industries (June 2021)**: Contributed to project planning and design for manufacturing centrifugal pumps, 
+      ensuring efficient and high-quality production.
+    - **CADD Center Training (Jan 2021 – Mar 2021)**: Achieved proficiency in CATIA, learning advanced skills such as part, 
+      surface, and assembly design, kinematics, and rendering techniques.
+    """
+)
+
 # --- SKILLS ---
 st.write("\n")
 st.subheader("Hard Skills", anchor=False)
