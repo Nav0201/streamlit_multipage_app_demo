@@ -1,14 +1,9 @@
 import streamlit as st
-
 from forms.contact import contact_form
-
-
 
 @st.experimental_dialog("Contact Me")
 def show_contact_form():
     contact_form()
-
-
 
 # --- HERO SECTION ---
 col1, col2 = st.columns(2, gap="small", vertical_alignment="center")
@@ -23,6 +18,18 @@ with col2:
     if st.button("✉️ Contact Me"):
         show_contact_form()
 
+# --- ABOUT ME ---
+st.write("\n")
+st.subheader("About Me", anchor=False)
+st.write(
+    """
+    Hello! I am Naveen, a highly skilled software engineer with a passion for building impactful web tools, 
+    automation services, and creating user-friendly solutions. With a strong foundation in full-stack development, 
+    data visualization, and business analysis, I have worked on various projects that combine technical excellence 
+    with creative design. I am always eager to learn and grow, both personally and professionally, and aim to make a 
+    difference through innovation.
+    """
+)
 
 # --- EXPERIENCE & QUALIFICATIONS ---
 st.write("\n")
@@ -39,16 +46,74 @@ st.write(
     """
 )
 
+# --- EDUCATION ---
+st.write("\n")
+st.subheader("Education", anchor=False)
+st.write(
+    """
+    - Bachelor's degree in Mechatronics Engineering from Hindustan Institute of Technology and Science (2018-2022)
+    - Cumulative GPA: 7.90/10
+    """
+)
+
+# --- PROJECTS ---
+st.write("\n")
+st.subheader("Projects", anchor=False)
+st.write(
+    """
+    - **Log Analysis Tool - LOGAN.V4 (2024)**: Built a Python and Django-based tool to automate log processing for network testers. Enabled efficient analysis, result visualization, and data downloads.
+    - **Excel Automation Tools (2024)**: Created automation tools using PyQt and Tkinter, simplifying workflows for Excel data processing tasks.
+    - **Bipolar Plates for Fuel Cells (2022)**: Designed and developed cost-effective bipolar plates for fuel cells in collaboration with Skypoint Industries.
+    - **Robotic Manipulator (2021)**: Designed and developed a robotic manipulator for industrial applications.
+    - **UV Sterilization Box (2020)**: Developed a UV Sterilization Box that eliminates bacteria from everyday objects.
+    """
+)
 
 # --- SKILLS ---
 st.write("\n")
 st.subheader("Hard Skills", anchor=False)
 st.write(
     """
-    - Programming: Python (Django, Tkinter,, streamlit, Pandas), JavaScript, HTML, CSS, SQL
-    - Data Visualization: PowerBi, Tableau, MS Excel, Matplotlib
-    - Modeling: Data analysis, forecasting, and optimization
-    - Tools: CATIA, SolidWorks, Power BI
-    - Databases: PostgreSQL, MySQL
+    - **Programming**: Python (Django, Tkinter, Streamlit, Pandas), JavaScript, HTML, CSS, SQL
+    - **Data Visualization**: Power BI, Tableau, MS Excel, Matplotlib
+    - **Modeling**: Data analysis, forecasting, and optimization
+    - **Tools**: CATIA, SolidWorks, Power BI
+    - **Databases**: PostgreSQL, MySQL
+    """
+)
+
+# --- CERTIFICATIONS ---
+st.write("\n")
+st.subheader("Certifications", anchor=False)
+st.write(
+    """
+    - CATIA
+    - Industrial IoT (L&T Edutech)
+    - Marketing in the Digital World
+    - Introduction to Psychology
+    """
+)
+
+# --- AWARDS ---
+st.write("\n")
+st.subheader("Awards", anchor=False)
+st.write(
+    """
+    - **2024**: Babel Fish Award, Best Associate at Accenture
+    - **2022**: Best Innovation Project for UV Sterilization Box, Hindustan Institute
+    - **2021**: Industry Innovation Grant, Robotic Manipulator for Skypoint Industries
+    """
+)
+
+# --- SOFT SKILLS ---
+st.write("\n")
+st.subheader("Soft Skills", anchor=False)
+st.write(
+    """
+    - Strong problem-solving and critical thinking skills
+    - Effective communicator with the ability to collaborate across teams
+    - Creative thinker with a passion for design and innovation
+    - Detail-oriented with the ability to prioritize tasks effectively
+    - Strong leadership and team management abilities
     """
 )
