@@ -17,6 +17,11 @@ project_2_page = st.Page(
     title="Chat Bot",
     icon=":material/smart_toy:",
 )
+project_3_page = st.Page(
+    page="views/Web_Automation.py",
+    title="Web Automation",
+    icon=":material/service:",
+)
 
 # --- NAVIGATION SETUP [WITHOUT SECTIONS] ---
 # pg = st.navigation(pages=[about_page, project_1_page, project_2_page])
