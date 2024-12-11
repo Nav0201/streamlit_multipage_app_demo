@@ -18,17 +18,21 @@ with col2:
     )
     if st.button("✉️ Contact Me"):
         show_contact_form()
+        
+    # Add resume download button
+    resume_url = "https://github.com/Nav0201/streamlit_multipage_app_demo/raw/main/views/nav_CV_2024.pdf"
+    resume_file = requests.get(resume_url).content  # Fetch the file content
+    
+    st.download_button(
+        label="📄 Download My Resume",
+        data=resume_file,
+        file_name="Naveen_CV_2024.pdf",
+        mime="application/pdf"
+    )
 
-# Add resume download button
-resume_url = "https://github.com/Nav0201/streamlit_multipage_app_demo/raw/main/views/nav_CV_2024.pdf"
-resume_file = requests.get(resume_url).content  # Fetch the file content
 
-st.download_button(
-    label="📄 Download My Resume",
-    data=resume_file,
-    file_name="Naveen_CV_2024.pdf",
-    mime="application/pdf"
-)
+
+
     
 # --- ABOUT ME ---
 st.write("\n")
