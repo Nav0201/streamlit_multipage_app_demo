@@ -20,7 +20,7 @@ project_2_page = st.Page(
 project_3_page = st.Page(
     page="views/Web_Automation.py",
     title="Web Automation",
-    icon=":material/smart_toy:",  # Or choose any other service-related icon
+    icon=":material/gear:",  # Or choose any other service-related icon
 )
 
 # --- NAVIGATION SETUP [WITHOUT SECTIONS] ---
@@ -31,7 +31,7 @@ pg = st.navigation(
     {
         "Info": [about_page],
         # "Projects": [ project_2_page],
-        "Projects": [project_3_page, project_2_page],
+        "Projects": [project_2_page, project_3_page],
     }
 )
 
