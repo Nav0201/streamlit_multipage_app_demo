@@ -110,21 +110,42 @@ st.write(
 
 # --- SKILLS ---
 st.write("\n")
-st.subheader("Skills", anchor=False)
+st.subheader("Technical Skills", anchor=False)
 st.write(
     """
-    - **Programming**: Python (Django, Tkinter, Streamlit, Pandas), JavaScript, HTML, CSS, SQL
-    - **Data Visualization**: Power BI, Tableau, MS Excel, Matplotlib
-    - **Modeling**: Data analysis, forecasting, and optimization
-    - **Tools**: CATIA, SolidWorks, Power BI
-    - **Databases**: PostgreSQL, MySQL
-    - Strong problem-solving and critical thinking skills
-    - Effective communicator with the ability to collaborate across teams
-    - Creative thinker with a passion for design and innovation
-    - Detail-oriented with the ability to prioritize tasks effectively
-    - Strong leadership and team management abilities
+    - **Proficient**:
+        - Python, Django, SQL, Java, HTML5, CSS3, Bootstrap 4/5
+        - Tableau, Power BI, Alteryx, MySQL, PostgreSQL
+        - Git, RESTful APIs, UI/UX (Wireframe & Prototyping)
+    - **Experienced**:
+        - Dassault Systèmes - CATIA, SolidWorks, Industrial IoT
+        - Data Analysis, PyQt, Tkinter, MS Office Suite
+        - Change Management Processes, Agile Development
     """
 )
+
+st.write("\n")
+st.subheader("Project Management", anchor=False)
+st.write(
+    """
+    - Business Requirement Analysis
+    - Industry Analysis
+    - Data Analytics Tools
+    - Process Automation
+    """
+)
+
+st.write("\n")
+st.subheader("Certifications", anchor=False)
+st.write(
+    """
+    - CATIA
+    - Industrial IoT (L&T Edutech)
+    - Marketing in the Digital World
+    - Introduction to Psychology
+    """
+)
+
 
 
 # # --- SOFT SKILLS ---
@@ -136,14 +157,4 @@ st.write(
 #     """
 # )
 
-# --- CERTIFICATIONS ---
-st.write("\n")
-st.subheader("Certifications", anchor=False)
-st.write(
-    """
-    - CATIA
-    - Industrial IoT (L&T Edutech)
-    - Marketing in the Digital World
-    - Introduction to Psychology
-    """
-)
+
