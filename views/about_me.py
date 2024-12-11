@@ -6,7 +6,7 @@ def show_contact_form():
     contact_form()
 
 # --- HERO SECTION ---
-col1, col2 = st.columns(2, gap="small", vertical_alignment="center")
+col1, col2, col3 = st.columns(2, gap="small", vertical_alignment="center")
 with col1:
     st.image("./assets/profile_image1.png", width=230)
 
@@ -17,6 +17,11 @@ with col2:
     )
     if st.button("✉️ Contact Me"):
         show_contact_form()
+
+with col3:
+    # Add resume download link
+    resume_url = "https://github.com/Nav0201/streamlit_multipage_app_demo/edit/main/views/nav_CV_2024.pdf"
+    st.markdown(f"[📄 Download My Resume]({resume_url})", unsafe_allow_html=True)
 
 # --- ABOUT ME ---
 st.write("\n")
