@@ -7,7 +7,8 @@ def show_contact_form():
     contact_form()
 
 # --- HERO SECTION ---
-col1, col2= st.columns(2, gap="small", vertical_alignment="center")
+col1, col2 = st.columns(2, gap="small", vertical_alignment="center")  # Two columns side by side
+
 with col1:
     st.image("./assets/profile_image1.png", width=230)
 
@@ -16,19 +17,25 @@ with col2:
     st.write(
         "Automation Enthusiast | Software Engineering Analyst at Accenture | Full Stack Developer | Innovating Network Solutions & Operational Efficiency"
     )
-    if st.button("✉️ Contact Me"):
-        show_contact_form()
+
+    # Create another two columns within col2 to display buttons side by side
+    button_col1, button_col2 = st.columns(2)  # Creates two columns in this specific section
+
+    with button_col1:
+        if st.button("✉️ Contact Me"):
+            show_contact_form()
+
+    with button_col2:
+        # Add resume download button
+        resume_url = "https://github.com/Nav0201/streamlit_multipage_app_demo/raw/main/views/nav_CV_2024.pdf"
+        resume_file = requests.get(resume_url).content  # Fetch the file content
         
-    # Add resume download button
-    resume_url = "https://github.com/Nav0201/streamlit_multipage_app_demo/raw/main/views/nav_CV_2024.pdf"
-    resume_file = requests.get(resume_url).content  # Fetch the file content
-    
-    st.download_button(
-        label="My Resume 📥",
-        data=resume_file,
-        file_name="Naveen_CV_2024.pdf",
-        mime="application/pdf"
-    )
+        st.download_button(
+            label="My Resume 📥",
+            data=resume_file,
+            file_name="Naveen_CV_2024.pdf",
+            mime="application/pdf"
+        )
 
 
 
