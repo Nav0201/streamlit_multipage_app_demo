@@ -39,7 +39,7 @@ st.write("\n")
 st.subheader("About Me", anchor=False)
 st.write(
     """
-    I’m an ambitious engineer with strong product designing knowledge, analytical and interpersonal skills. Thriving to connect the gap between technical expertise and business outcomes, leveraging my skills to achieve impactful results.
+    I’m an ambitious engineer with strong product development and building expertise, coupled with analytical and interpersonal skills. Thriving to connect the gap between technical expertise and business outcomes, leveraging my skills to achieve impactful results.
     """
 )
 
