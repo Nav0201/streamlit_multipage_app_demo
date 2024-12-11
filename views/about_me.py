@@ -24,7 +24,7 @@ with col2:
     resume_file = requests.get(resume_url).content  # Fetch the file content
     
     st.download_button(
-        label="📄 Download My Resume",
+        label="📥 My Resume",
         data=resume_file,
         file_name="Naveen_CV_2024.pdf",
         mime="application/pdf"
