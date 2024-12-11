@@ -1,4 +1,5 @@
 import streamlit as st
+import requests
 from forms.contact import contact_form
 
 @st.experimental_dialog("Contact Me")
