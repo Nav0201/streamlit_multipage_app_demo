@@ -82,7 +82,7 @@ st.write(
 
 # --- PROJECTS ---
 st.write("\n")
-st.subheader("Projects & Internships", anchor=False)
+st.subheader("Projects & Research", anchor=False)
 st.write(
     """
     - **Log Analysis Tool - LOGAN.V4 (2024)**: Built a Python and Django-based tool to automate log processing for network testers. Enabled efficient analysis, result visualization, and data downloads.
