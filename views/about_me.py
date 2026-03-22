@@ -1,167 +1,180 @@
 import streamlit as st
-import requests
 from forms.contact import contact_form
 
+# --- CACHE RESUME FILE ---
+@st.cache_data
+def load_resume():
+    try:
+        with open("views/Naveen_Ashokkumar_CV_26_TS.pdf", "rb") as f:
+            return f.read()
+    except FileNotFoundError:
+        return None
+
+
+# --- CONTACT FORM DIALOG ---
 @st.experimental_dialog("Contact Me")
 def show_contact_form():
     contact_form()
 
+
 # --- HERO SECTION ---
-col1, col2 = st.columns(2, gap="small", vertical_alignment="center")  # Two columns side by side
+col1, col2 = st.columns(2, gap="small", vertical_alignment="center")
 
 with col1:
     st.image("./assets/profile_image1.png", width=230)
 
 with col2:
     st.title("Naveen Ashokkumar", anchor=False)
+    st.write("📧 naveensiva383@gmail.com")
+    st.write("📞 +91-6379272850")
+
     st.write(
-        "Automation Enthusiast | Software Engineering Analyst at Accenture | Full Stack Developer | Innovating Network Solutions & Operational Efficiency"
+        """
+        **Data & Analytics Engineer | Automation & Operations Lead | 
+        Python • SQL • Power BI • Data Workflows • Analytics Platforms**
+        """
     )
 
-    # Create another two columns within col2 to display buttons side by side
-    button_col1, button_col2 = st.columns(2)  # Creates two columns in this specific section
+    button_col1, button_col2 = st.columns(2)
 
+    # --- CONTACT BUTTON ---
     with button_col1:
         if st.button("✉️ Contact Me"):
             show_contact_form()
 
+    # --- RESUME DOWNLOAD (FIXED) ---
     with button_col2:
-        # Add resume download button
-        resume_url = "https://github.com/Nav0201/streamlit_multipage_app_demo/raw/main/views/nav_CV_2024.pdf"
-        resume_file = requests.get(resume_url).content  # Fetch the file content
-        
-        st.download_button(
-            label="My Resume 📥",
-            data=resume_file,
-            file_name="Naveen_CV_2024.pdf",
-            mime="application/pdf"
-        )
+        resume_file = load_resume()
+
+        if resume_file:
+            st.download_button(
+                label="My Resume 📥",
+                data=resume_file,
+                file_name="Naveen_Ashokkumar_CV.pdf",
+                mime="application/pdf"
+            )
+        else:
+            st.error("Resume file not found. Please check 'views/' folder.")
 
 
-
-
-    
-# --- ABOUT ME ---
+# --- CAREER SUMMARY ---
 st.write("\n")
-st.subheader("About Me", anchor=False)
+st.subheader("Career Summary", anchor=False)
 st.write(
-    """
-    I’m an ambitious engineer with strong product development and building expertise, coupled with analytical and interpersonal skills. Thriving to connect the gap between technical expertise and business outcomes, leveraging my skills to achieve impactful results.
-    """
+"""
+Results-driven **Data & Analytics Engineer with 3 years of experience** designing and optimizing
+production-grade **data workflows, ETL pipelines, and analytics platforms**.
+
+Adept at leveraging **Python, SQL, Power BI, and automation frameworks** to enable
+data-driven decision making and operational intelligence.
+
+Passionate about **workflow automation, scalable data solutions, and data quality governance**, with
+proven experience translating complex operational challenges into **high-impact analytics
+and automation systems.**
+"""
 )
 
-# --- EXPERIENCE & QUALIFICATIONS ---
-st.write("\n")
-st.subheader("Experience & Qualifications", anchor=False)
-st.write(
-    """
-    - Analyst at Accenture with expertise in building web tools, automation, and services
-    - Skilled in full-stack development, data visualization, and data analysis
-    - Proficient in Python, Java, Business Requirement Analysis, Django
-    - Extensive experience in data visualization using Tableau, Power BI, and MS Excel
-    - Creative designer experienced in product, house, interior, and fashion design 
-    - Strong interest in business, aiming to pursue an MBA to enhance knowledge and grow as a business analyst
-    - Excellent under pressure, with strong task management and team collaboration skills
-    - Bachelor's degree in Mechatronics Engineering from Hindustan Institute of Technology and Science (2018-2022)
-    - Cumulative GPA: 7.90/10
-    """
-)
 
-# # --- EDUCATION ---
-# st.write("\n")
-# st.subheader("Education", anchor=False)
-# st.write(
-#     """
-    
-#     """
-# )
+# --- WORK EXPERIENCE ---
+st.write("\n")
+st.subheader("Work Experience", anchor=False)
+
+st.markdown("""
+### **Data Analyst / Automation & Operations Lead — Accenture**
+**Nov 2022 – Present**
+""")
+
+st.markdown("""
+#### LOGAN – Network Log Analysis & Automation Platform
+- Designed and built **LOGAN**, a Python & Django-based web application to automate network log analysis.
+- Automated ingestion, parsing, and analysis of logs for OTT, HTTP, YouTube, Voice, and M2M services.
+- Implemented success/failure detection logic with remediation insights.
+- Enabled visualization, downloads, and structured troubleshooting workflows.
+- Improved engineer productivity and troubleshooting accuracy.
+""")
+
+st.markdown("""
+#### Automation & Analytics Enablement Program
+- Built end-to-end automation accelerators across operations.
+- Developed Python + Excel automation tools using PyQt and Tkinter.
+- Designed QoS J+5 Automation & KPI Advancement Framework.
+- Automated QoS decision workflows.
+- Mentored team members on automation and analytics design.
+""")
+
+st.markdown("""
+#### Bytel – Data Workflow & Power BI Platform
+- Built automated pipelines from email ingestion to Python transformations.
+- Created centralized trackers with deduplication and delivery logic.
+- Integrated multiple data sources into scalable analytical models.
+- Developed Power BI dashboards for KPI tracking and insights.
+""")
+
+st.markdown("""
+#### Bytel – 5G Operations Analytics & Leadership
+- Led analytics for large-scale 5G operations.
+- Designed KPI frameworks for productivity and SLA tracking.
+- Acted as SPOC between teams and leadership.
+- Implemented reporting and governance dashboards.
+""")
+
+st.markdown("""
+#### AI / Copilot Analytics Assistants
+- Built rule-driven assistants for troubleshooting guidance.
+- Embedded analytics into workflows.
+- Enabled self-service analytics and faster onboarding.
+""")
+
+
+# --- TECHNICAL SKILLS ---
+st.write("\n")
+st.subheader("Technical Skills", anchor=False)
+
+st.markdown("""
+**Data & Programming**
+- Python, SQL
+- Excel & Google Sheets (Automation, Power Query)
+
+**Analytics & BI**
+- Power BI (DAX, Data Modeling, Dashboards)
+- KPI Reporting, Trend Analysis
+
+**Data Engineering & Automation**
+- ETL Pipelines
+- Data Consolidation
+- API Integrations
+- Log Analytics
+
+**Tools & Platforms**
+- Django, PyQt, Tkinter
+- SharePoint
+- Power BI Workspaces
+""")
+
+
+# --- EDUCATION ---
+st.write("\n")
+st.subheader("Education", anchor=False)
+
+st.markdown("""
+**B.Tech – Mechatronics Engineering**  
+Hindustan Institute of Technology and Science, Chennai  
+**2022 | CGPA: 7.9**
+
+**Class XII**  
+Chennai, Tamil Nadu  
+**2018 | 82%**
+""")
+
 
 # --- AWARDS ---
 st.write("\n")
-st.subheader("Awards", anchor=False)
-st.write(
-    """
-    - **2024**: Babel Fish Award, Best Associate at Accenture
-    - **2022**: Best Innovation Project for UV Sterilization Box, Hindustan Institute
-    - **2021**: Industry Innovation Grant, Robotic Manipulator for Skypoint Industries
-    """
-)
+st.subheader("Awards & Recognition", anchor=False)
 
-# --- PROJECTS ---
-st.write("\n")
-st.subheader("Projects & Research", anchor=False)
-st.write(
-    """
-    - **Log Analysis Tool - LOGAN.V4 (2024)**: Built a Python and Django-based tool to automate log processing for network testers. Enabled efficient analysis, result visualization, and data downloads.
-    - **Excel Automation Tools (2024)**: Created automation tools using PyQt and Tkinter, simplifying workflows for Excel data processing tasks.
-    - **Bipolar Plates for Fuel Cells (2022)**: Designed and developed cost-effective bipolar plates for fuel cells in collaboration with Skypoint Industries.
-    - **Robotic Manipulator (2021)**: Designed and developed a robotic manipulator for industrial applications.
-    - **UV Sterilization Box (2020)**: Developed a UV Sterilization Box that eliminates bacteria from everyday objects.
-    - **East West Combined Industries (Jan 2022 – May 2022)**: Researched and developed fuel cells and bipolar plates. 
-      Collaborated with clients to understand requirements and delivered innovative, cost-effective solutions.
-    - **Skypoint Industries (June 2021)**: Contributed to project planning and design for manufacturing centrifugal pumps, 
-      ensuring efficient and high-quality production.
-    - **CADD Center Training (Jan 2021 – Mar 2021)**: Achieved proficiency in CATIA, learning advanced skills such as part, 
-      surface, and assembly design, kinematics, and rendering techniques.
-    """
-)
+st.markdown("""
+**Accenture – Best Associate Award**  
+Recognized for strong ownership and high performance.
 
-# # --- INTERNSHIPS ---
-# st.write("\n")
-# st.subheader("Internships", anchor=False)
-# st.write(
-#     """
-    
-#     """
-# )
-
-# --- SKILLS ---
-st.write("\n")
-st.subheader("Technical Skills", anchor=False)
-st.write(
-    """
-    - **Proficient**:
-        - Python, Django, SQL, Java, HTML5, CSS3, Bootstrap 4/5
-        - Tableau, Power BI, Alteryx, MySQL, PostgreSQL
-        - Git, RESTful APIs, UI/UX (Wireframe & Prototyping)
-    - **Experienced**:
-        - Dassault Systèmes - CATIA, SolidWorks, Industrial IoT
-        - Data Analysis, PyQt, Tkinter, MS Office Suite
-        - Change Management Processes, Agile Development
-    """
-)
-
-st.write("\n")
-st.subheader("Project Management", anchor=False)
-st.write(
-    """
-    - Business Requirement Analysis
-    - Industry Analysis
-    - Data Analytics Tools
-    - Process Automation
-    """
-)
-
-st.write("\n")
-st.subheader("Certifications", anchor=False)
-st.write(
-    """
-    - CATIA
-    - Industrial IoT (L&T Edutech)
-    - Marketing in the Digital World
-    - Introduction to Psychology
-    """
-)
-
-
-
-# # --- SOFT SKILLS ---
-# st.write("\n")
-# st.subheader("Soft Skills", anchor=False)
-# st.write(
-#     """
-    
-#     """
-# )
-
-
+**Accenture – Innovation Igniter Award**  
+Recognized for driving impactful ideas and process improvements.
+""")
