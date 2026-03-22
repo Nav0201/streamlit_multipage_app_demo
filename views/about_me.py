@@ -54,7 +54,7 @@ with col2:
                 mime="application/pdf"
             )
         else:
-            st.error("Resume file not found. Please check 'views/' folder.")
+            st.error("Resume file not found.")
 
 
 # --- CAREER SUMMARY ---
