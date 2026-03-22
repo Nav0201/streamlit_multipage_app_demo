@@ -50,7 +50,7 @@ with col2:
             st.download_button(
                 label="My Resume 📥",
                 data=resume_file,
-                file_name="Naveen_Ashokkumar_CV.pdf",
+                file_name="Naveen_Ashokkumar_Resume.pdf",
                 mime="application/pdf"
             )
         else:
